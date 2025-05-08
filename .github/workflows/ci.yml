@@ -13,8 +13,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Install dependencies (if any)
-        run: npm install # Remove this if your site is purely static
       - name: Run tests
         run: echo "Add tests here (e.g., linting, validation)" # Placeholder for tests
       - name: Build
