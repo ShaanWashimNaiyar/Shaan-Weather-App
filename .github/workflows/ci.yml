@@ -1,0 +1,21 @@
+name: CI Pipeline
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install dependencies (if any)
+        run: npm install # Remove this if your site is purely static
+      - name: Run tests
+        run: echo "Add tests here (e.g., linting, validation)" # Placeholder for tests
+      - name: Build
+        run: echo "Build step (e.g., minify JS/CSS)" # Placeholder for build
